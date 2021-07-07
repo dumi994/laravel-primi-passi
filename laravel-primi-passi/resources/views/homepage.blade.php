@@ -21,7 +21,7 @@
         @foreach($users as $user)
             @foreach($user as $el)
                 <div class="card">
-                    <span>{{$el}}</span>
+                    <span>{{$el.name}}</span>
                 </div>
                 
                 @if($loop->last)
