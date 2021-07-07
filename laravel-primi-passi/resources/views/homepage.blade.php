@@ -15,19 +15,18 @@
             -
             @endif
         @endforeach
-    
     </div>
     <div>
         @foreach($users as $user)
-            @foreach($user as $el)
-                <div class="card">
-                    <span>{{$el.name}}</span>
-                </div>
-                
-                @if($loop->last)
-                -
-                @endif
-            @endforeach
+            <div class="card" style="margin:15px; border:1px solid black">
+                <p>Nome: {{$user['name']}}</p>
+                <p>Cognome: {{$user['lastname']}}</p>
+                <h2>Skill: {{$user['skills']}}</h2>
+            </div>
+
+            @if($loop->last)
+            -
+            @endif
         @endforeach
     </div>
         
